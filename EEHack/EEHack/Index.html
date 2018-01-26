@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8"> 
+        window.onload = function () {
+            var url = "ws://localhost:52464/WebSocketServer.ashx?ConnectionData=" + $("#deviceIP").val() + "?ClientName=" + $("#clientName").val();
+            var ws = new WebSocket(url);
+
+            ws.onopen = function () {
+                log("open web socket");
+                ws.send("connection established");
+            }
+            ws.onmessage = function (e) {
+                if (e.data.toString().startsWith("new Data for Value 1:")) {
+                }
+                else {
+                    log(e.data.toString());
+                }
+            }
+            ws.onclose = function () {
+                log("WebSocket closed");
+            }
+            ws.onerror = function (e) {
+                log("error");
+            }
+        }
+        
+        function log(s) {
+            var logOutput = document.getElementById("logOutput");
+            var el = $("#logOutput").after('<hr>' + s);
+            
+        }
+    </script>
+
+    
+
+</head>
+<body>
+    <h2>Links to other views</h2>
+
+    <br /><a href="HotelRoom.html">Room View</a>
+    <br /><a href="DemoClient.html">Demo Client</a>
+
+
+
+    <h2>Server Example</h2>
+
+    <pre id="output"></pre>
+    <p><h3>Logging</h3></p>
+    <p id="logOutput">
+
+
+
+    </p>
+</body>
+</html>

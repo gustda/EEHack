@@ -1,0 +1,18 @@
+﻿body {
+}
+
+#boxAmbientTemperature {
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    top: 205px;
+    left: 1042px;
+}
+
+#boxSunState {
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    top: 280px;
+    left: 1042px;
+}
