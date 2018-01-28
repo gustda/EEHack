@@ -85,7 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ressources\css\HotelRoom.css" />
-    <Content Include="Ressources\Images\ctb_geöffnet_on.png">
+    <Content Include="Ressources\css\Index.css" />
+    <Content Include="Ressources\Images\ctb_geoeffnet_on.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Ressources\Images\Heizung.png">
@@ -95,6 +96,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Ressources\Images\licht_on.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\Images\presence.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Ressources\Images\Room Controls.PNG" />
